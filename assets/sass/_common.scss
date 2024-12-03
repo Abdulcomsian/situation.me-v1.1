@@ -1,0 +1,252 @@
+html,
+body {
+    overflow-x: hidden;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.container {
+    @include mn_xl {
+        max-width: 1142px;
+    }
+
+    @include mn_xxl {
+        max-width: 1322px;
+    }
+
+    @include lg {
+        max-width: 962px;
+    }
+
+    @include md {
+        max-width: 744px;
+    }
+
+    @include sm {
+        max-width: 542px;
+    }
+}
+
+.px-40 {
+    padding: 0 42px;
+
+    @include md {
+        padding: 0 0;
+    }
+}
+
+.g-40 {
+    gap: 40px;
+}
+
+.gap-100 {
+    gap: 100px;
+}
+
+.g-100 {
+    --bs-gutter-x: 100px;
+    --bs-gutter-y: 60px;
+}
+
+.mb-28 {
+    margin-bottom: 28px;
+}
+
+.mt-28 {
+    margin-top: 28px;
+}
+
+.pt-90 {
+    padding-top: 90px !important;
+}
+
+.template-btn {
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    border-radius: 64px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &.primary-btn {
+        background: var(--primary-light);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: -150%;
+            width: 200%;
+            height: 150%;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        &:hover {
+            color: var(--color-white);
+
+            &::before {
+                top: -30%;
+            }
+        }
+    }
+
+    &.secondary-btn {
+        background: var(--secondary-color);
+        color: var(--color-white) !important;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: -150%;
+            width: 200%;
+            height: 150%;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        &:hover {
+            color: var(--color-white);
+
+            &::before {
+                top: -30%;
+            }
+        }
+    }
+}
+
+mark {
+    padding: 0;
+    background: transparent;
+    color: var(--primary-color);
+}
+
+
+// section Title 
+.st_title_box {
+    position: relative;
+
+    & h2 {
+        font-size: 64px;
+        font-weight: 800;
+        letter-spacing: -2.56px;
+        line-height: 1.325;
+        margin-bottom: 13px;
+
+        @include lg {
+            font-size: 40px;
+            letter-spacing: -1.60px;
+        }
+
+        @include sm {
+            font-size: 32px;
+            letter-spacing: -1.28px;
+            margin-bottom: 20px;
+        }
+    }
+
+    & p {
+        font-size: 18px;
+        line-height: 1.713;
+        letter-spacing: -0.60px;
+
+        @include lg {
+            font-size: 16px;
+            letter-spacing: -0.40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// Section Number dots 
+.sec_number_circle {
+    position: relative;
+    font-size: 70px;
+    letter-spacing: -2.80px;
+    font-weight: 800;
+    font-family: var(--primary-font);
+    z-index: 2;
+    margin-bottom: 33px;
+
+    @include sm {
+        font-size: 48px;
+        letter-spacing: -1.92px;
+        margin-bottom: 39px !important;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -44px;
+        top: 20px;
+        width: 71px;
+        height: 71px;
+        font-size: 70px;
+        line-height: 1;
+        letter-spacing: -2.80px;
+        border-radius: 50%;
+        background: #EC973A;
+        z-index: -1;
+
+        @include sm {
+            right: -25px;
+            top: 14px;
+            width: 49px;
+            height: 49px;
+        }
+    }
+
+    &.blue_ligh::after {
+        background: #46DBC9;
+    }
+}
+
+// Scroll top 
+
+.scroll-top {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    right: 30px;
+    bottom: 80px;
+    cursor: pointer;
+    z-index: 999992;
+    border-radius: 50%;
+    color: #FFFFFF;
+    display: none;
+    border: 0;
+    outline: 0;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: var(--primary-color);
+
+    &:hover {
+        background: var(--shape-color)
+    }
+
+    & i {
+        font-size: 18px;
+        padding: 13.5px 15.75px;
+    }
+}

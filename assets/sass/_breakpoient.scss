@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+# BreakPoient
+--------------------------------------------------------------*/
+$breakpoient: ("col": 575px,
+    "sm": 767px,
+    "md": 991px,
+    "lg": 1199px,
+    "xl": 1399px,
+    "xxl": 1400px,
+);
+
+$breakpoient2: ("mn_md": 768px,
+    "mn_lg": 992px,
+    "mn_xl": 1200px,
+);
+
+@mixin col {
+    @media(max-width: map-get($breakpoient, col)) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media(max-width: map-get($breakpoient, sm)) {
+        @content;
+    }
+}
+
+@mixin mn_md {
+    @media(min-width: map-get($breakpoient2, mn_md)) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media(max-width: map-get($breakpoient, md)) {
+        @content;
+    }
+}
+
+@mixin mn_lg {
+    @media(min-width: map-get($breakpoient2, mn_lg)) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media(max-width: map-get($breakpoient, lg)) {
+        @content;
+    }
+}
+
+@mixin mn_xl {
+    @media(min-width: map-get($breakpoient2, mn_xl)) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media(max-width: map-get($breakpoient, xl)) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media(max-width: map-get($breakpoient, xxl)) {
+        @content;
+    }
+}
+
+@mixin mn_xxl {
+    @media(min-width: map-get($breakpoient, xxl)) {
+        @content;
+    }
+}
+
+@mixin mimx-w($min, $max) {
+    @media (min-width: map-get($breakpoient2, $min)) and (max-width: map-get($breakpoient, $max)) {
+        @content;
+    }
+}

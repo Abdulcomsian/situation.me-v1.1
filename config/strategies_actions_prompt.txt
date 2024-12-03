@@ -1,0 +1,104 @@
+User Situation & Context: The user has described their situation below:
+SITUATION: ${userInput}
+
+User Responses to Specific Questions:
+
+1. "${questionsText[0]}" Answer: ${answers[0]}
+2. "${questionsText[1]}" Answer: ${answers[1]}
+3. "${questionsText[2]}" Answer: ${answers[2]}
+4. "${questionsText[3]}" Answer: ${answers[3]}
+5. "${questionsText[4]}" Answer: ${answers[4]}
+
+
+Provide ranked list of **actionable strategies** based on the information above.
+Rank these categories from most to least successful
+Structure your response strictly in the JSON format below:
+
+
+{
+    "strategies": [
+        {
+            "strategy_1": "Strategy 1 Name",
+            "actions": [
+                {
+                    "strategy1_action1": "Action 1",
+                    "results": [
+                        "Result 1 description",
+                        "Result 2 description",
+                        "Result 3 description"
+                    ]
+                },
+                {
+                    "strategy1_action2": "Action 2",
+                    "results": [
+                        "Result 1 description",
+                        "Result 2 description",
+                        "Result 3 description"
+                    ]
+                },
+                {
+                    "strategy1_action3": "Action 3",
+                    "results": [
+                        "Result 1 description",
+                        "Result 2 description",
+                        "Result 3 description"
+                    ]
+                }
+            ]
+        },
+        {
+            "strategy_2": "Strategy 2 Name",
+            "actions": [
+                // Same structure as above
+            ]
+        },
+        // Continue up to 6 strategies under "strategies"
+    ],
+    "frequently_failing_strategies": [
+        {
+            "strategy_7": "Strategy 7 Name",
+            "actions": [
+                {
+                    "strategy7_action1": "Action 1",
+                    "results": [
+                        "Result 1 description",
+                        "Result 2 description",
+                        "Result 3 description"
+                    ]
+                },
+                {
+                    "strategy7_action2": "Action 2",
+                    "results": [
+                        "Result 1 description",
+                        "Result 2 description",
+                        "Result 3 description"
+                    ]
+                },
+                {
+                    "strategy7_action3": "Action 3",
+                    "results": [
+                        "Result 1 description",
+                        "Result 2 description",
+                        "Result 3 description"
+                    ]
+                }
+            ]
+        },
+        {
+            "strategy_8": "Strategy 8 Name",
+            "actions": [
+                // Same structure as above
+            ]
+        },
+        // Continue up to 4 strategies under "frequently_failing_strategies"
+    ]
+}
+
+Guidelines for Generating Strategies:
+1. Provide a minimum of 5 strategies and a maximum of 10 strategies in total.
+2. The majority of strategies (recommended) should go under the "strategies" key (1–6).
+3. Provide at least 1 frequently failing strategy (7–10) under "frequently_failing_strategies".
+4. Recommended strategies should focus on actionable, positive outcomes.
+5. Failing strategies should highlight common pitfalls or mistakes.
+6. Maintain the exact structure with three results for each action, ensuring results are 20-50 characters each.
+7. Rank these strategies from most to least successful

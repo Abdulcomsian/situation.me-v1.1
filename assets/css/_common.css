@@ -1,0 +1,16 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+.g-40 {
+  gap: 40px; }
+
+.template-btn {
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--secondary-font);
+  border-radius: 64px; }
+  .template-btn.primary-btn {
+    background: var(--primary-light); }
