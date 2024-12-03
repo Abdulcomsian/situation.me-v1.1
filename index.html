@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situations.Me</title>
+
+    <link rel="icon" href="assets/images/favicon.jpg">
+
+    <!--essential style library-->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+</head>
+
+<body>
+    <main>
+        <!--header section start-->
+        <header class="st_header_section">
+            <div class="container st_header_box">
+                <div class="row align-items-center">
+                    <div class="col-md-5 col-lg-4 col-7">
+                        <div class="st_header_logo">
+                            <a href="../index.html"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 col-5">
+                        <div class="st_header_right d-flex g-40 align-items-center justify-content-end">
+                            <nav class="st_header_nav">
+                                <ul>
+                                    <li><a class="scroll" href="../index.html#how_it_works">How it works</a></li>
+                                    <li><a class="scroll" href="../index.html#how_different">How we're different</a>
+                                    </li>
+                                    <li><a href="../faq.html">FAQ</a></li>
+                                    <li><a href="../about.html">About us</a></li>
+                                </ul>
+                            </nav>
+                            <div class="st_header_btns d-flex gap-3 align-items-center justify-content-end d-lg-none">
+                                <button type="button" class="st_mobile_menu_toggle menu_btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--header section end-->
+
+        <!-- Funnel works Start  -->
+        <section class="funnel_works_sec">
+            <div class="container">
+                <div class="row">
+                    <form id="chatForm" name="situations-step-form">
+                        <div class="col-md-12">
+                            <h3 class="text-center">Try our core functionality and get a taste of what we plan to offer
+                                you soon!</h3>
+                            <!-- Progress bar -->
+                            <div class="progressbar">
+                                <div class="progress" id="progress"></div>
+                                <div class="progress_step progress_step_active" data-title="Describe your Situation">
+                                </div>
+                                <div class="progress_step" data-title="Additional Information"></div>
+                                <div class="progress_step" data-title="Strategies & Actions"></div>
+                                <div class="progress_step" data-title="Products and Services"></div>
+                                <div class="progress_step" data-title="Share your Feedback!"></div>
+                            </div>
+
+                            <!-- Steps 1-->
+                            <div class="form_step form_step_active">
+                                <div class="row g-5 g-md-4">
+                                    <div class="col-md-5 d-none d-md-block">
+                                        <div class="form_step_thumb text-center">
+                                            <img src="assets/images/form/step-2.png" alt="Your Situation"
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="form_step_content">
+                                            <h2>Your Situation</h2>
+                                            <div class="step_info">
+                                                <img src="assets/images/idea.svg" alt="idea" class="img-fluid" />
+                                                <ul>
+                                                    <li>Please describe a life situation that you want to evaluate.</li>
+                                                    <li>Short facts are more useful than lengthy emotional texts.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form_step_field mn-height-420">
+                                            <div class="input-group">
+                                                <label class="form-label link" for="your-ituation"><a
+                                                        href="#modal_step_2" data-bs-toggle="modal">See
+                                                        examples</a></label>
+                                                <textarea name="the-user_input" id="userInput" maxlength="500"
+                                                    placeholder="Describe your situation..." autofocus></textarea>
+                                            </div>
+                                            <div class="text-end w-100">
+                                                <button class="template-btn primary-btn ml-auto text-white"
+                                                    type="submit" data-id="1">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Steps 2-->
+                            <div class="form_step">
+                                <div class="row g-5 g-md-4">
+                                    <div class="col-md-5 d-none d-md-block">
+                                        <div class="form_step_thumb text-center">
+                                            <img src="assets/images/form/step-3.png" alt="Your Situation"
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="form_step_content">
+                                            <h2>Additional Information</h2>
+                                            <div class="step_info">
+                                                <img src="assets/images/idea.svg" alt="idea" class="img-fluid" />
+                                                <ul>
+                                                    <li>Please answer the questions below to provide us with additional
+                                                        information.</li>
+                                                    <li>Feel free to skip less important or invasive questions </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form_step_field question_field">
+                                            <div class="input-group">
+                                                <label for="queston-1" id="queston-1">Question 1</label>
+                                                <input type="text" name="answer-1" placeholder="Your answer here..."
+                                                    style="color: black;">
+                                            </div>
+                                            <div class="input-group">
+                                                <label for="queston-2" id="queston-2">Question 2</label>
+                                                <input type="text" name="answer-2" placeholder="Your answer here..."
+                                                    style="color: black;">
+                                            </div>
+                                            <div class="input-group">
+                                                <label for="queston-3" id="queston-3">Question 3</label>
+                                                <input type="text" name="answer-3" placeholder="Your answer here..."
+                                                    style="color: black;">
+                                            </div>
+                                            <div class="input-group">
+                                                <label for="queston-4" id="queston-4">Question 4</label>
+                                                <input type="text" name="answer-4" placeholder="Your answer here..."
+                                                    style="color: black;">
+                                            </div>
+                                            <div class="input-group">
+                                                <label for="queston-5" id="queston-5">Question 5</label>
+                                                <input type="text" name="answer-5" placeholder="Your answer here..."
+                                                    style="color: black;">
+                                            </div>
+                                            <div class="text-end w-100">
+                                                <button class="template-btn primary-btn ml-auto text-white"
+                                                    type="submit" data-id="2">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Steps 3-->
+                            <div class="form_step solution_step">
+                                <div class="row g-5 g-md-4">
+                                    <div class="col-md-12">
+                                        <div class="form_step_content">
+                                            <h2 class="title_with_arrow">Strategies <i
+                                                    class="fa-solid fa-arrow-right-long"></i> Actions <i
+                                                    class="fa-solid fa-arrow-right-long"></i> Results</h2>
+                                            <div class="step_info">
+                                                <img src="assets/images/idea.svg" alt="idea" class="img-fluid" />
+                                                <ul>
+                                                    <li>Review the proposed Strategies to handle this Situation</li>
+                                                    <li>Explore possible Actions and their Results</li>
+                                                    <li>Select Strategies that you want to explore to see suggested
+                                                        products and services.</li>
+                                                </ul>
+                                            </div>
+                                            <h3>Recommended Strategies</h3>
+                                            <div class="accordion_wrapper mb-5">
+                                                <div id="recommended-strategies"></div>
+                                            </div>
+                                            <h3>Frequently failing Strategies</h3>
+                                            <div class="accordion_wrapper">
+                                                <div id="failing-strategies"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="text-end w-100">
+                                            <button class="template-btn primary-btn ml-auto text-white" type="submit"
+                                                data-id="3">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Steps 4-->
+                            <div class="form_step rlt_pd_service">
+                                <div class="col-md-12 pt-4 mt-2">
+                                    <div class="form_step_content form_step_related_service">
+                                        <h2>Relevant Products and Services:</h2>
+                                        <div class="step_info">
+                                            <img src="assets/images/idea.svg" alt="idea" class="img-fluid" />
+                                            <ul>
+                                                <li>Review the proposed Strategies to handle this Situation</li>
+                                                <li>Explore possible Actions and their Results</li>
+                                            </ul>
+                                        </div>
+                                        <div class="related_service_product pt-2">
+                                            <h3>Products</h3>
+                                            <div id="productsContainer" class="accordion_wrapper">
+                                                <!-- Products will be dynamically injected here -->
+                                            </div>
+                                            <h3 class="mt-5">Services</h3>
+                                            <div id="servicesContainer" class="accordion_wrapper">
+                                                <!-- Services will be dynamically injected here -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <div class="text-end w-100">
+                                        <a href="#"
+                                            class="btn btn_next template-btn primary-btn ml-auto text-white">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Steps 5-->
+                            <div class="form_step feeback_step">
+                                <div class="row g-5 g-md-4">
+                                    <div class="col-md-5 d-none d-md-block">
+                                        <div class="form_step_thumb text-center">
+                                            <img src="assets/images/form/step-5.png" alt="Your Situation"
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="form_step_content">
+                                            <h2>We want to know what you think about our demo!</h2>
+                                            <div class="step_info">
+                                                <img src="assets/images/idea.svg" alt="idea" class="img-fluid" />
+                                                <ul>
+                                                    <li>We will improve our design and user experience based on your
+                                                        feedback.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="form_step_field feedback_switch">
+                                            <div class="input-group">
+                                                <h4>Did you find our recommendations useful?</h4>
+                                                <div class="input_radio_field">
+                                                    <p>
+                                                        <input type="radio" id="nUseful" name="recommendations_usefull"
+                                                            value="no">
+                                                        <label for="nUseful">No</label>
+                                                    </p>
+                                                    <p>
+                                                        <input type="radio" id="yUseful" name="recommendations_usefull"
+                                                            value="yes">
+                                                        <label for="yUseful">Yes</label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <h4>Did you learn anything new regarding your situation?</h4>
+                                                <div class="input_radio_field">
+                                                    <p>
+                                                        <input type="radio" id="nSituation" name="learned_anything_new"
+                                                            value="no">
+                                                        <label for="nSituation">No</label>
+                                                    </p>
+                                                    <p>
+                                                        <input type="radio" id="ySituation" name="learned_anything_new"
+                                                            value="yes">
+                                                        <label for="ySituation">Yes</label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <h4>Are recommended products and services relevant?</h4>
+                                                <div class="input_radio_field">
+                                                    <p>
+                                                        <input type="radio" id="nRelevant"
+                                                            name="products_and_services_relevant" value="no">
+                                                        <label for="nRelevant">No</label>
+                                                    </p>
+                                                    <p>
+                                                        <input type="radio" id="yRelevant"
+                                                            name="products_and_services_relevant" value="yes">
+                                                        <label for="yRelevant">Yes</label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <h4>Suggest one thing you want to improve in our product. We will do
+                                                    this for you!</h4>
+                                                <div class="input-group">
+                                                    <textarea name="your_suggestion" id="step_message" maxlength="500"
+                                                        placeholder="Share your thoughts here..." autofocus></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <h4>Add your email to get notified about our full featured product
+                                                    launch:</h4>
+                                                <div class="input-group">
+                                                    <input type="email" name="your-email" id="y-email"
+                                                        placeholder="Your email..">
+                                                </div>
+                                            </div>
+                                            <div class="text-end w-100">
+                                                <a href="#"
+                                                    class="btn btn_next template-btn primary-btn ml-auto text-white">Submit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Steps 6-->
+                            <div class="form_step final_submition mx-auto">
+                                <div class="row g-5 g-md-4">
+                                    <div class="col-md-12 pt-3">
+                                        <div class="form_step_thumb">
+                                            <img src="assets/images/form/step-6.png" alt="Your Situation"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="form_step_content">
+                                            <h2>Thanks for your feedback!</h2>
+                                            <a href="index.html" class="btn text-white template-btn primary-btn">Explore
+                                                Another Situation</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Steps  -->
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Funnel works End  -->
+
+        <!-- Modal for step 1-->
+        <div class="modal fade step_modal" id="modal_step_1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>How other users describe themselves:</h3>
+                        <ul>
+                            <li>28-year-old software engineer, avid rock climber, and dog owner living in Seattle.</li>
+                            <li>College student majoring in biology, part-time barista, and amateur photographer. I live
+                                in the midwest.</li>
+                            <li>Stay-at-home parent of twins, former accountant, passionate about gardening and cooking.
+                            </li>
+                            <li>Retired military veteran, current small business owner, and classic car enthusiast.</li>
+                            <li>Coding monkey by day, rock-scaling junkie by night. Barking roommate in tow. The Sierra
+                                mountains are my backyard.</li>
+                            <li>High school teacher specializing in physics, weekend gamer, and aspiring novelist.</li>
+                            <li>Male, 28 yo, live in Boston. College dropout. Love dogs. Single. Not very happy with my
+                                life.</li>
+                            <li>32 yo single mom of a autistic child. Live in NYC with my parents. Fighting with life
+                                for my future happiness.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal for step 1 end-->
+
+        <!-- Modal for step 2-->
+        <div class="modal fade step_modal" id="modal_step_2">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Situations that other users want to explore:</h3>
+                        <ul>
+                            <li>I'm dating a person of different religion and race. My parents are furious about our
+                                relationship.</li>
+                            <li>I've been living paycheck-to-paycheck for many years. Need to change this somehow.</li>
+                            <li>I just found out my long-term partner has been hiding a massive gambling debt from me.
+                            </li>
+                            <li>My boss offered me a promotion, but it would require relocating to a city I hate.</li>
+                            <li>I'm considering dropping out of medical school to pursue my passion for art.</li>
+                            <li>My best friend confessed they're in love with me, but I don't feel the same way.</li>
+                            <li>I accidentally discovered that my child isn't biologically mine through a DNA test kit.
+                            </li>
+                            <li>I'm thinking about quitting my stable job to start a business, but I have no savings.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal for step 2 end-->
+        <!--footer section start-->
+        <footer class="st_footer_section overflow-hidden position-relative pt-90">
+            <div class="container-fluid p-0">
+                <div class="st_footer_content">
+                    <h2 class="mb-3">We always want to hear <br> from you!</h2>
+                    <p>Feel free to send us a message, share your <br> thoughts, report a bug or propose a feature.</p>
+                    <hr class="st_line_seperator">
+                </div>
+                <div class="st_footer_bottom d-flex">
+                    <div class="st_footer_copyright">
+                        <p class="mb-0">Copyright (�) 2024 by Situations, Inc.</p>
+                    </div>
+                    <div class="st_footer_widget">
+                        <a href="home.html"><img src="assets/images/footer-logo.png" alt="logo"
+                                class="st_footer_logo img-fluid"></a>
+                        <ul class="st_footer_nav">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="st_footer_contact">
+                        <p>Contact us:</p>
+                        <a href="mailto:contact@situations.me">contact@situations.me</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer section end-->
+    </main>
+
+    <!-- Mobile Header  Start-->
+    <section class="popup_menubar_sec">
+        <div class="popup_menubar_overlay"></div>
+        <div class="pop_menubar_background">
+            <div class="popMenubarArea">
+                <div class="popMenu_top">
+                    <div class="menu_pop_logo">
+                        <a href="home.html">
+                            <img src="assets/images/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <a href="javascript:void(0);" id="popup_nav_Closer"><i class="fas fa-times"></i></a>
+                </div>
+                <div class="dfNav_popupWrapper">
+                    <nav class="menubar_popup">
+                        <ul class="main_mobile_menu d-flex align-items-center">
+                            <li><a class="scroll" href="home.html#how_it_works">How it works</a></li>
+                            <li><a class="scroll" href="home.html#how_different">How we're different</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mobile Header END -->
+    <img src="assets/images/loader.gif" id="loader"
+        style="display: block; margin: 0 auto; width: 100px; visibility: hidden;">
+
+    <a id="scroll_top" class="scroll-top" style="display: block; transform: scale(1);"><i
+            class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        // Setting options for toastr notifications
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+
+        $(document).ready(function () {
+            // jQuery document ready event to ensure the DOM is fully loaded
+
+            // Event handler for button clicks with a data-id attribute
+            $('button[data-id]').click(function (event) {
+                // Prevent default action (e.g., form submission)
+                event.preventDefault();
+
+                // Retrieve the step ID from the clicked button's data-id attribute
+                var stepId = $(this).data('id');
+
+                // Describe Your Situation Step button click
+                if (stepId === 1) {
+                    // This is the button the user clicked. We're disabling it to prevent multiple clicks.
+                    var $button = $(this);
+                    $button.prop('disabled', true);
+
+                    // Retrieve the user's input from the input field with id 'userInput' and remove extra spaces.
+                    var userInput = $('#userInput').val().trim();
+
+                    // If the input is empty, show an alert and return early from the function.
+                    if (!userInput) {
+                        alert("Please describe your situation.");
+                        return;
+                    }
+
+                    // Show a loader indicating the process is happening.
+                    $('#loader').css('visibility', 'visible');
+
+                    // Fetch the prompt template from 'config/additional_info_prompt.txt' file.
+                    fetch('config/additional_info_prompt.txt')
+                        .then(response => response.text()) // When the file is fetched, read it as text.
+                        .then(data => {
+                            // Replace the placeholder '${userInput}' in the prompt with the user's input.
+                            var prompt = data.replace('${userInput}', userInput);
+
+                            // Make an AJAX POST request to send the generated prompt to the server-side API for processing.
+                            $.ajax({
+                                url: 'ajax/api-request.php', // URL for the API endpoint.
+                                type: 'POST', // Using POST request to send data.
+                                data: { user_input: prompt }, // Sending the prompt as data.
+                                dataType: 'json', // Expecting a JSON response from the server.
+                                success: function (response) {
+                                    // Check if the response contains choices (i.e., GPT returned valid data).
+                                    if (response && response.choices && response.choices.length > 0) {
+
+                                        // Get the assistant's response message (this is the content we need to work with).
+                                        var assistantResponse = response.choices[0].message.content;
+
+                                        // Split the assistant's response into separate lines, which are expected to be questions.
+                                        var questions = assistantResponse.split("\n");
+
+                                        // Clean up each question by removing numbers and extra spaces.
+                                        var cleanedQuestions = questions.map(function (question) {
+                                            return question.replace(/^\d+\.\s*/, '').trim();
+                                        });
+
+                                        // If the number of cleaned questions is 5 or more, populate them on the page.
+                                        if (cleanedQuestions.length >= 5) {
+                                            for (let i = 0; i < 5; i++) {
+                                                var label = document.getElementById('queston-' + (i + 1));
+                                                if (label && cleanedQuestions[i]) {
+                                                    label.textContent = cleanedQuestions[i]; // Set the text content of the label to the question.
+                                                }
+                                            }
+                                        } else {
+                                            console.error("Expected 5 questions but got:", cleanedQuestions.length);
+                                        }
+
+                                        // After the questions are populated, find the 'next' button and simulate a click on it.
+                                        const nextBtn = document.querySelector('.btn_next');
+                                        $('#loader').css('visibility', 'hidden'); // Hide the loader as the process is complete.
+                                        if (nextBtn) {
+                                            nextBtn.click(); // Programmatically click the next button.
+                                        } else {
+                                            console.error('Next button not found!'); // If the next button doesn't exist, log an error.
+                                        }
+                                    } else {
+                                        console.error("No valid response received from GPT."); // Handle the case where no valid response is received.
+                                    }
+                                },
+                                error: function (xhr, status, error) {
+                                    // If there's an error with the AJAX request, log the error and show a message to the user.
+                                    console.error("AJAX Error:", error);
+                                    $('#response').html('<p style="color: red;">An error occurred. Please try again.</p>');
+                                }
+                            });
+                        });
+                }
+                // Additional Information Step button click
+                else if (stepId === 2) {
+                    // Show loader and disable button to prevent multiple clicks
+                    $('#loader').css('visibility', 'visible');
+                    var $button = $(this);
+                    $button.prop('disabled', true);
+                    var originalButtonText = $button.text();
+
+                    // Initialize arrays to hold user answers and corresponding questions
+                    var answers = [];
+                    var questionsText = [];
+
+                    // Loop through the first 5 questions to get the answers and their respective question text
+                    for (var i = 1; i <= 5; i++) {
+                        var answer = $('input[name="answer-' + i + '"]').val().trim();
+                        var question = $('label#queston-' + i).text().trim();
+
+                        // Push the answers and questions to their respective arrays
+                        answers.push(answer);
+                        questionsText.push(question);
+                    }
+
+                    // Check if any answer is empty, if so alert the user and stop execution
+                    if (answers.some(answer => answer === '')) {
+                        alert("Please answer all the questions.");
+                        $button.text(originalButtonText);  // Restore the button text
+                        return;
+                    }
+
+                    // Get the user input from the text box
+                    var userInput = $('#userInput').val().trim();
+
+                    // Fetch the prompt template from the server
+                    fetch('config/strategies_actions_prompt.txt')
+                        .then(response => response.text())
+                        .then(data => {
+                            // Initialize the prompt with the fetched data
+                            var prompt = data;
+                            prompt = prompt.replace('${userInput}', userInput);  // Insert user input into prompt
+
+                            // Loop through the answers and questions to replace placeholders in the prompt
+                            for (var i = 0; i < 5; i++) {
+                                prompt = prompt.replace(`\${questionsText[${i}]}`, questionsText[i]);
+                                prompt = prompt.replace(`\${answers[${i}]}`, answers[i]);
+                            }
+
+                            // Send the constructed prompt to the backend via AJAX
+                            $.ajax({
+                                url: 'ajax/api-request.php',
+                                type: 'POST',
+                                data: { user_input: prompt },
+                                dataType: 'json',
+                                // Success callback function to handle the response
+                                success: function (response) {
+                                    // Check if the response contains valid data
+                                    if (response && response.choices && response.choices.length > 0) {
+                                        var assistantResponse = response.choices[0].message.content;
+
+                                        try {
+                                            // Check if the assistant response is not empty
+                                            if (assistantResponse && assistantResponse.trim().length > 0) {
+                                                try {
+                                                    // Parse the response as JSON, expecting a specific format
+                                                    var strategies = JSON.parse(assistantResponse);
+
+                                                    // Ensure strategies object has strategies and it is an array
+                                                    if (strategies && strategies.strategies && strategies.strategies.length > 0) {
+
+                                                        // Function to set inner HTML content for elements by id
+                                                        const setInnerHTML = (id, content) => {
+                                                            const element = document.getElementById(id);
+                                                            if (element) {
+                                                                element.innerHTML = content;
+                                                            }
+                                                        };
+
+                                                        // Iterate over each strategy and build the HTML for accordion sections
+                                                        strategies.strategies.forEach((strategy, strategyIndex) => {
+                                                            let strategyHTML = `
+                                                            <div class="accordion_item">
+                                                                <p>
+                                                                    <input type="checkbox" name="solution_result${strategyIndex}" id="solution_result${strategyIndex}">
+                                                                    <label for="solution_result${strategyIndex}"></label>
+                                                                </p>
+                                                                <h2 class="accordion__title" id="strategy_${strategyIndex}">
+                                                                    <span class="sub_heading">Strategy ${strategyIndex + 1}:</span>
+                                                                    ${strategy[`strategy_${strategyIndex + 1}`]} <i class="fas fa-angle-down"></i>
+                                                                </h2>
+                                                                <div class="accordion__content">
+                                                                    ${strategy.actions.map((action, actionIndex) => `
+                                                                        <div class="accordion_item accordion--nested">
+                                                                            <h4 class="accordion__title" id="strategy${strategyIndex}_action${actionIndex}">
+                                                                                <span class="sub_heading">Action ${actionIndex + 1}:</span>
+                                                                                ${action[`strategy${strategyIndex + 1}_action${actionIndex + 1}`]} <i class="fas fa-angle-down"></i>
+                                                                            </h4>
+                                                                            <div class="accordion__content">
+                                                                                <span class="sub_heading">Results:</span>
+                                                                                <ul class="result_list">
+                                                                                    ${action.results.map((result, resultIndex) => `
+                                                                                        <li id="strategy${strategyIndex}_action${actionIndex}_result${resultIndex}">
+                                                                                            ${result}
+                                                                                        </li>`).join('')}
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    `).join('')}
+                                                                </div>
+                                                            </div>`;
+                                                            // Append the generated strategy HTML to the recommended strategies container
+                                                            document.getElementById("recommended-strategies").innerHTML += strategyHTML;
+                                                        });
+
+                                                        // Accordion toggle functionality
+                                                        document.getElementById("recommended-strategies").addEventListener('click', function (event) {
+                                                            if (event.target.classList.contains('accordion__title') || event.target.closest('.accordion__title')) {
+                                                                const title = event.target.closest('.accordion__title');
+                                                                const accordionItem = title.parentElement;
+
+                                                                // Toggle the accordion open state and display of content
+                                                                accordionItem.classList.toggle('accordion--open');
+                                                                title.classList.toggle('show');
+                                                                const content = title.nextElementSibling;
+
+                                                                if (content.style.display === 'block') {
+                                                                    content.style.display = 'none';
+                                                                    content.style.maxHeight = null;
+                                                                } else {
+                                                                    content.style.display = 'block';
+                                                                }
+                                                            }
+                                                        });
+
+                                                        // Handle selection of recommended strategies and store them in session storage
+                                                        const selectedRecommendedStrategiesData = [];
+                                                        const selectedFailingStrategiesData = [];
+                                                        
+                                                        document.getElementById("recommended-strategies").addEventListener("change", function (event) {
+                                                            if (event.target.type === "checkbox") {
+                                                                selectedRecommendedStrategiesData.length = 0;
+
+                                                                // Collect selected strategies and store them in session storage
+                                                                document.querySelectorAll('#recommended-strategies input[type="checkbox"]:checked').forEach((checkbox) => {
+                                                                    const strategyIndex = parseInt(checkbox.id.replace("solution_result", ""), 10);
+                                                                    const strategy = strategies.strategies[strategyIndex];
+                                                                    if (strategy) {
+                                                                        selectedRecommendedStrategiesData.push({
+                                                                            strategyName: strategy[`strategy_${strategyIndex + 1}`],
+                                                                            actions: strategy.actions.map((action, actionIndex) => ({
+                                                                                actionName: action[`strategy${strategyIndex + 1}_action${actionIndex + 1}`],
+                                                                                results: action.results
+                                                                            }))
+                                                                        });
+                                                                    }
+                                                                });
+
+                                                                // Save the selected strategies data to session storage
+                                                                sessionStorage.setItem("selectedRecommendedStrategies", JSON.stringify(selectedRecommendedStrategiesData));
+                                                            }
+                                                        });
+
+                                                        // Check if there are any frequently failing strategies
+                                                        if (strategies.frequently_failing_strategies && strategies.frequently_failing_strategies.length > 0) {
+                                                            const mainStrategiesLength = strategies.strategies.length;
+
+                                                            // Add the failing strategies to the failing strategies section
+                                                            strategies.frequently_failing_strategies.forEach((failingStrategy, failingIndex) => {
+                                                                const failingStrategyKey = Object.keys(failingStrategy)[0];
+                                                                const adjustedStrategyIndex = mainStrategiesLength + failingIndex;
+
+                                                                let strategyHTML = `
+                                                                    <div class="accordion_item">
+                                                                        <p>
+                                                                            <input type="checkbox" name="solution_result_failing${adjustedStrategyIndex}" id="solution_result_failing${adjustedStrategyIndex}">
+                                                                            <label for="solution_result_failing${adjustedStrategyIndex}"></label>
+                                                                        </p>
+                                                                        <h2 class="accordion__title" id="strategy_failing_${adjustedStrategyIndex}">
+                                                                            <span class="sub_heading">Strategy ${adjustedStrategyIndex + 1}:</span>
+                                                                            ${failingStrategy[failingStrategyKey]} <i class="fas fa-angle-down"></i>
+                                                                        </h2>
+                                                                        <div class="accordion__content">
+                                                                            ${failingStrategy.actions.map((action, actionIndex) => {
+                                                                    const actionKey = Object.keys(action)[0];
+
+                                                                    return `
+                                                                                    <div class="accordion_item accordion--nested">
+                                                                                        <h4 class="accordion__title" id="strategy_failing${adjustedStrategyIndex}_action${actionIndex}">
+                                                                                            <span class="sub_heading">Action ${actionIndex + 1}:</span>
+                                                                                            ${action[actionKey]} <i class="fas fa-angle-down"></i>
+                                                                                        </h4>
+                                                                                        <div class="accordion__content">
+                                                                                            <span class="sub_heading">Results:</span>
+                                                                                            <ul class="result_list">
+                                                                                                ${action.results
+                                                                            .map(
+                                                                                (result, resultIndex) =>
+                                                                                    `<li id="strategy_failing${adjustedStrategyIndex}_action${actionIndex}_result${resultIndex}">
+                                                                                                                ${result}
+                                                                                                            </li>`
+                                                                            ).join("")}
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                `;
+                                                                }).join("")}
+                                                                        </div>
+                                                                    </div>
+                                                                `;
+
+                                                                // Append the generated HTML to the failing strategies container
+                                                                document.getElementById("failing-strategies").innerHTML += strategyHTML;
+                                                            });
+
+                                                            // Accordion toggle functionality for failing strategies
+                                                            document.getElementById("failing-strategies").addEventListener('click', function (event) {
+                                                                if (event.target.classList.contains('accordion__title') || event.target.closest('.accordion__title')) {
+                                                                    const title = event.target.closest('.accordion__title');
+                                                                    const accordionItem = title.parentElement;
+
+                                                                    // Toggle the accordion open state and display of content
+                                                                    accordionItem.classList.toggle('accordion--open');
+                                                                    title.classList.toggle('show');
+                                                                    const content = title.nextElementSibling;
+
+                                                                    if (content.style.display === 'block') {
+                                                                        content.style.display = 'none';
+                                                                        content.style.maxHeight = null;
+                                                                    } else {
+                                                                        content.style.display = 'block';
+                                                                    }
+                                                                }
+                                                            });
+
+                                                            // Handle selection of failing strategies and store them in session storage
+                                                            document.getElementById("failing-strategies").addEventListener("change", function (event) {
+                                                                if (event.target.type === "checkbox") {
+                                                                    selectedFailingStrategiesData.length = 0;
+
+                                                                    // Collect selected failing strategies and store them in session storage
+                                                                    document.querySelectorAll('#failing-strategies input[type="checkbox"]:checked').forEach((checkbox) => {
+                                                                        const strategyIndex = parseInt(checkbox.id.replace("solution_result_failing", ""), 10);
+
+                                                                        const totalRecommendedStrategies = strategies.strategies.length;
+                                                                        const totalStrategies = totalRecommendedStrategies + strategies.frequently_failing_strategies.length;
+
+                                                                        if (strategyIndex >= totalRecommendedStrategies && strategyIndex < totalStrategies) {
+                                                                            const failingStrategyIndex = strategyIndex - totalRecommendedStrategies;
+                                                                            const strategy = strategies.frequently_failing_strategies[failingStrategyIndex];
+
+                                                                            if (strategy) {
+                                                                                const strategyNameKey = Object.keys(strategy)[0];
+                                                                                selectedFailingStrategiesData.push({
+                                                                                    strategyName: strategy[strategyNameKey],
+                                                                                    actions: strategy.actions.map((action, actionIndex) => {
+                                                                                        const actionKey = Object.keys(action)[0];
+                                                                                        return {
+                                                                                            actionName: action[actionKey],
+                                                                                            results: action.results
+                                                                                        };
+                                                                                    })
+                                                                                });
+                                                                            }
+                                                                        }
+                                                                    });
+
+                                                                    // Save the selected failing strategies data to session storage
+                                                                    sessionStorage.setItem("selectedFailingStrategies", JSON.stringify(selectedFailingStrategiesData));
+                                                                }
+                                                            });
+
+                                                        }
+
+                                                        // Hide the loader and simulate clicking the next button to proceed
+                                                        const nextBtn = document.querySelector('.btn_next');
+                                                        $('#loader').css('visibility', 'hidden');
+                                                        if (nextBtn) {
+                                                            nextBtn.click();
+                                                        }
+
+                                                    } else {
+                                                        // Handle case where strategies are not found or are empty
+                                                        setInnerHTML("recommended-strategies", "<p>No strategies were found.</p>");
+                                                    }
+
+                                                } catch (error) {
+                                                    // Catch block for handling errors while parsing the assistant's response
+                                                    console.error("Error parsing assistant response:", error);
+                                                    setInnerHTML("recommended-strategies", "<p>Error occurred while processing strategies.</p>");
+                                                }
+                                            }
+                                        } catch (error) {
+                                            // Catch block for handling general errors in the assistant response handling
+                                            console.error("Error handling assistant response:", error);
+                                        }
+                                    }
+                                },
+                                // AJAX Error handler
+                                error: function (xhr, status, error) {
+                                    // Log the AJAX error for debugging purposes
+                                    console.error("AJAX Error:", error);
+                                    // Show an error message on the response container
+                                    $('#response').html('<p style="color: red;">An error occurred. Please try again.</p>');
+                                    // Restore the button text after the error
+                                    $button.text(originalButtonText);
+                                }
+                            });
+                        });
+                }
+                // Strategies & Actions Step button click
+                else if (stepId === 3) {
+                    var $button = $(this);
+                    $button.prop('disabled', true); // Disable the button to prevent multiple clicks
+                    $('#loader').css('visibility', 'visible'); // Show the loader while waiting for the response
+
+                    // Fetch the products prompt text from a file
+                    fetch('config/products_services_prompt.txt')
+                        .then(response => response.text()) // Wait for the response text
+                        .then(data => {
+                            var userSituation = $('#userInput').val().trim(); // Get the user's input
+                            const selectedRecommendedStrategies = JSON.parse(sessionStorage.getItem('selectedRecommendedStrategies')); // Retrieve recommended strategies from sessionStorage
+                            const selectedFailingStrategies = JSON.parse(sessionStorage.getItem('selectedFailingStrategies')); // Retrieve failing strategies from sessionStorage
+
+                            // If no user situation or strategies are found, show an error and stop the process
+                            if (!userSituation || !selectedRecommendedStrategies) {
+                                toastr.error("Please complete the previous steps first.");
+                                $button.prop('disabled', false); // Re-enable the button
+                                $('#loader').css('visibility', 'hidden'); // Hide the loader
+                                return;
+                            }
+
+                            // Prepare the strategies text to include in the prompt
+                            const strategiesText = `Recommended Strategies: ${JSON.stringify(selectedRecommendedStrategies)}, 
+                                    Failing Strategies: ${JSON.stringify(selectedFailingStrategies)}`;
+
+                            // Replace placeholders in the prompt template with actual values
+                            var prompt = data
+                                .replace('${userSituation}', userSituation)
+                                .replace('${strategiesText}', strategiesText);
+
+                            // Make an AJAX request to the server with the user input as prompt
+                            $.ajax({
+                                url: 'ajax/api-request.php', // The URL to send the AJAX request to
+                                type: 'POST',
+                                data: { user_input: prompt }, // Send the prompt as the user input
+                                dataType: 'json', // Expect JSON in return
+                                success: function (response) {
+                                    // Check if the response is valid and contains the choices
+                                    if (response && response.choices && response.choices.length > 0) {
+                                        const data = JSON.parse(response.choices[0].message.content); // Parse the response content
+
+                                        $('#productsContainer').empty(); // Clear the products container
+                                        $('#servicesContainer').empty(); // Clear the services container
+
+                                        // If there are products in the response, loop through and display them
+                                        if (data.products) {
+                                            data.products.forEach((product, index) => {
+                                                const productName = Object.values(product)[0]; // Get the product name
+                                                const categories = product.categories; // Get the product categories
+
+                                                // Generate HTML for the product and append it to the products container
+                                                const productHTML = `
+                                                <div class="accordion_item">
+                                                    <h2 class="accordion__title" id="product-${index + 1}">
+                                                        ${productName || `Product ${index + 1}`} 
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content ps-1">
+                                                        ${Object.values(categories).map(
+                                                    (category) => `<p>- ${category}</p>`
+                                                ).join('')}
+                                                    </div>
+                                                </div>
+                                            `;
+                                                $('#productsContainer').append(productHTML);
+                                            });
+
+                                            // Add accordion toggle functionality for products
+                                            document.getElementById("productsContainer").addEventListener('click', function (event) {
+                                                if (event.target.classList.contains('accordion__title') || event.target.closest('.accordion__title')) {
+                                                    const title = event.target.closest('.accordion__title');
+                                                    const accordionItem = title.parentElement;
+                                                    const content = title.nextElementSibling;
+
+                                                    // Toggle accordion open/close state
+                                                    accordionItem.classList.toggle('accordion--open');
+                                                    title.classList.toggle('show');
+
+                                                    // Show/hide content based on the current state
+                                                    if (content.style.display === 'block') {
+                                                        content.style.display = 'none';
+                                                    } else {
+                                                        content.style.display = 'block';
+                                                    }
+                                                }
+                                            });
+                                        }
+
+                                        // If there are services in the response, loop through and display them
+                                        if (data.services) {
+                                            data.services.forEach((service, index) => {
+                                                const serviceName = Object.values(service)[0]; // Get the service name
+                                                const categories = service.categories; // Get the service categories
+
+                                                // Generate HTML for the service and append it to the services container
+                                                const serviceHTML = `
+                                                    <div class="accordion_item">
+                                                        <h2 class="accordion__title" id="service-${index + 1}">
+                                                            ${serviceName || `Service ${index + 1}`} 
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </h2>
+                                                        <div class="accordion__content ps-1">
+                                                            ${Object.values(categories).map(
+                                                    (category) => `<p>- ${category}</p>`
+                                                ).join('')}
+                                                        </div>
+                                                    </div>
+                                                `;
+                                                $('#servicesContainer').append(serviceHTML);
+                                            });
+
+                                            // Add accordion toggle functionality for services
+                                            document.getElementById("servicesContainer").addEventListener('click', function (event) {
+                                                if (event.target.classList.contains('accordion__title') || event.target.closest('.accordion__title')) {
+                                                    const title = event.target.closest('.accordion__title');
+                                                    const accordionItem = title.parentElement;
+                                                    const content = title.nextElementSibling;
+
+                                                    // Toggle accordion open/close state
+                                                    accordionItem.classList.toggle('accordion--open');
+                                                    title.classList.toggle('show');
+
+                                                    // Show/hide content based on the current state
+                                                    if (content.style.display === 'block') {
+                                                        content.style.display = 'none';
+                                                    } else {
+                                                        content.style.display = 'block';
+                                                    }
+                                                }
+                                            });
+                                        }
+
+                                        // Find the 'Next' button and trigger a click to proceed
+                                        const nextBtn = document.querySelector('.btn_next');
+                                        $('#loader').css('visibility', 'hidden'); // Hide the loader once processing is done
+                                        if (nextBtn) {
+                                            nextBtn.click(); // Simulate click on the Next button to proceed
+                                        } else {
+                                            console.error('Next button not found!');
+                                        }
+                                    } else {
+                                        console.error('No valid response received from GPT.');
+                                        $('#loader').css('visibility', 'hidden');
+                                        $button.prop('disabled', false); // Re-enable the button
+                                        alert('No valid response received. Please try again.');
+                                    }
+                                },
+                                error: function (xhr, status, error) {
+                                    $('#loader').css('visibility', 'hidden');
+                                    console.error('AJAX Error:', error); // Log any AJAX errors
+                                    alert('An error occurred while fetching the data.'); // Show error message to the user
+                                },
+                            });
+                        })
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

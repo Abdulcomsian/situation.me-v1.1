@@ -1,0 +1,128 @@
+.popMenu_top {
+  background: var(--secondary-color); }
+  .popMenu_top #popup_nav_Closer i {
+    color: var(--color-white);
+    font-size: 24px; }
+  .popMenu_top #popup_nav_Closer:hover i {
+    color: var(--primary-color); }
+
+.menu_pop_logo img {
+  max-width: 161px;
+  width: 100%; }
+
+.dfNav_popupWrapper {
+  padding: 80px 40px; }
+  .dfNav_popupWrapper .menubar_popup .main_mobile_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .dfNav_popupWrapper .menubar_popup .main_mobile_menu li {
+      position: relative;
+      border-bottom: 1px solid #444444;
+      width: 100%;
+      text-align: center;
+      padding: 15px 30px; }
+      .dfNav_popupWrapper .menubar_popup .main_mobile_menu li a {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        color: var(--secondary-color);
+        font-family: var(--secondary-font); }
+        .dfNav_popupWrapper .menubar_popup .main_mobile_menu li a:hover {
+          color: var(--primary-color); }
+  .dfNav_popupWrapper .menuPopup_btn {
+    position: relative;
+    padding: 70px 20px; }
+    .dfNav_popupWrapper .menuPopup_btn a {
+      color: var(--color-white); }
+
+.popup_menubar_sec {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0; }
+  .popup_menubar_sec .popup_menubar_overlay {
+    position: fixed;
+    top: 0;
+    right: auto;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 21, 21, 0.7);
+    z-index: 99998;
+    opacity: 0;
+    visibility: hidden;
+    cursor: url(../images/close.png), auto;
+    -webkit-transition: all 0.4s ease-in 0.8s;
+    -o-transition: all 0.4s ease-in 0.8s;
+    transition: all 0.4s ease-in 0.8s; }
+  .popup_menubar_sec.active .popup_menubar_overlay {
+    right: auto;
+    left: 0;
+    visibility: visible;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+    right: 0;
+    opacity: 1; }
+  .popup_menubar_sec .pop_menubar_background {
+    background: #FFFFFF;
+    max-width: 360px;
+    right: auto;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: unset;
+    z-index: 99998;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.5s;
+    -webkit-transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.5s;
+    -o-transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.5s;
+    transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.5s;
+    overflow-y: auto; }
+    .popup_menubar_sec .pop_menubar_background .popMenubarArea {
+      position: relative;
+      width: 100%;
+      height: 100%; }
+    .popup_menubar_sec .pop_menubar_background .popMenu_top {
+      padding: 20px 20px;
+      border-bottom: 1px solid rgba(24, 24, 24, 0.1);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: space-between;
+      -ms-flex-pack: space-between;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-column-gap: 40px;
+      -moz-column-gap: 40px;
+      column-gap: 40px; }
+  .popup_menubar_sec.active .pop_menubar_background {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.3s;
+    -webkit-transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.5s;
+    -o-transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.5s;
+    transition: all 0.5s cubic-bezier(0.9, 0.03, 0, 0.96) 0.5s; }
